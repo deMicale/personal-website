@@ -12,6 +12,12 @@
     justify-content: space-between;
     background-color: black;
 }
+@media screen and (min-width: 480px) {
+    .headerWrapper{
+        min-height: 70px;
+        max-height: 90px;
+    } 
+}
 .logoWrapper{
     /* border: 1px solid black; */
     width:50px;
@@ -19,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 .logoCode{
     width: 35px;
@@ -40,11 +47,25 @@
     height: 35px;
     object-fit: cover;
 }
+@media screen and (min-width: 480px) {
+    .iconGithub, .logoCode{
+        width: 45px;
+        height: 45px;
+    } 
+    .linkGitHub{
+        display: flex;
+    }
+}
 /*main*/
 .mainWrapper{
     /* border: 1px solid red; */
     width: 100%;
     height: 72%;
+}
+@media screen and (min-width: 480px) {
+    .mainWrapper{
+        height: 62%;
+    } 
 }
 .hero{
     /* border: 1px solid red; */
@@ -73,6 +94,19 @@
     flex-direction: column;
     text-align: center;
 }
+@media screen and (min-width: 480px) {
+    .name{
+        font-size: 2.7em;
+    } 
+
+    .profession{
+        font-size: 2em;
+    }
+
+    .explanation{
+        font-size: 1.5em;
+    } 
+}
 .skillsWrapper{
     /* border: 1px solid yellow; */
     width:100%;
@@ -80,6 +114,7 @@
     flex-direction: column;
     height: fit-content;
     text-align: center;
+    padding-top: 50px;
 }
 .sectionTitle{
     /* border: 1px solid yellow; */
@@ -87,29 +122,70 @@
     justify-content: center;
     margin: 40px;
 }
+@media screen and (min-width: 480px) {
+    .sectionTitle{
+        font-size: 2em;
+    } 
+}
 .devWrapper , .seoWrapper{
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
+}
+@media screen and (min-width: 480px) {
+    .devWrapper, .seoWrapper{
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    .seoWrapper{
+        flex-direction: row-reverse;
+    } 
 }
 .devImgWrapper, .seoImgWrapper{
     /* border: 1px solid black; */
     min-height: 250px;
     max-height: 250px;
 }
+@media screen and (min-width: 480px) {
+    .devImgWrapper, .seoImgWrapper{
+        max-width: 50%;
+    } 
+}
 .devTitleWrapper, .seoTitleWrapper{
     margin: 40px;
+}
+@media screen and (min-width: 480px) {
+    .devTitleWrapper, .seoTitleWrapper{
+       margin: 30px; 
+       display: flex;
+       flex-direction: column;
+    } 
 }
 .workImg{
     width: 100%;
     max-height: 350px;
     object-fit: cover;  
 }
+@media screen and (min-width: 480px){
+    .workImg{
+        height: fit-content;
+    }
+}
 .skillTitle{
     margin: 0;
 }
+@media screen and (min-width: 480px){
+    .skillTitle{
+        font-size:1.7em ;
+    }
+}
 .skillSubtitle{
     margin-bottom: 0px;
+}
+@media screen and (min-width: 480px){
+    .skillSubtitle{
+        font-size:1.2em ;
+    }
 }
 /*footer*/
 .footerWrapper{
@@ -131,9 +207,14 @@
     color:white;
     margin: 0px;   
 }
+
 .linkContact{
     margin: 5px;
     color: white;
+}
+.e-mail{
+    color: lightblue;
+    text-decoration: none;
 }
 .socialmediaWrapper{
     display: flex;
@@ -146,4 +227,20 @@
     margin: 10px;
     width: 35px;
     height: 35px;
+}
+@media screen and (min-width: 480px){
+    .footerTitle{
+        font-size: 1.5em;
+    }
+    .linkContact{
+        font-size: 1.5em;
+    }
+    .socialmediaWrapper{
+        margin-bottom: 10px;
+        height: 45px;
+    }
+    .socialIcon{
+        width: 45px;
+        height: 45px;  
+    }
 }
