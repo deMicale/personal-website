@@ -2,6 +2,8 @@
     margin: 0;
     font-family: 'KoHo', sans-serif;
 }
+
+
 /*header*/
 .headerWrapper{
     /* border: 1px solid black; */
@@ -11,12 +13,6 @@
     align-items: center;
     justify-content: space-between;
     background-color: black;
-}
-@media screen and (min-width: 480px) {
-    .headerWrapper{
-        min-height: 70px;
-        max-height: 90px;
-    } 
 }
 .logoWrapper{
     /* border: 1px solid black; */
@@ -47,7 +43,12 @@
     height: 35px;
     object-fit: cover;
 }
+/*media query tablet*/
 @media screen and (min-width: 480px) {
+    .headerWrapper{
+        min-height: 70px;
+        max-height: 90px;
+    } 
     .iconGithub, .logoCode{
         width: 45px;
         height: 45px;
@@ -56,16 +57,12 @@
         display: flex;
     }
 }
+
 /*main*/
 .mainWrapper{
     /* border: 1px solid red; */
     width: 100%;
     height: 72%;
-}
-@media screen and (min-width: 480px) {
-    .mainWrapper{
-        height: 62%;
-    } 
 }
 .hero{
     /* border: 1px solid red; */
@@ -94,19 +91,6 @@
     flex-direction: column;
     text-align: center;
 }
-@media screen and (min-width: 480px) {
-    .name{
-        font-size: 2.7em;
-    } 
-
-    .profession{
-        font-size: 2em;
-    }
-
-    .explanation{
-        font-size: 1.5em;
-    } 
-}
 .skillsWrapper{
     /* border: 1px solid yellow; */
     width:100%;
@@ -122,75 +106,80 @@
     justify-content: center;
     margin: 40px;
 }
-@media screen and (min-width: 480px) {
-    .sectionTitle{
-        font-size: 2em;
-    } 
-}
 .devWrapper , .seoWrapper{
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-}
-@media screen and (min-width: 480px) {
-    .devWrapper, .seoWrapper{
-        flex-direction: row;
-        justify-content: space-between;
-    } 
-    .seoWrapper{
-        flex-direction: row-reverse;
-    } 
 }
 .devImgWrapper, .seoImgWrapper{
     /* border: 1px solid black; */
     min-height: 250px;
     max-height: 250px;
 }
-@media screen and (min-width: 480px) {
-    .devImgWrapper, .seoImgWrapper{
-        max-width: 50%;
-    } 
-}
 .devTitleWrapper, .seoTitleWrapper{
     margin: 40px;
-}
-@media screen and (min-width: 480px) {
-    .devTitleWrapper, .seoTitleWrapper{
-       margin: 30px; 
-       display: flex;
-       flex-direction: column;
-    } 
-}
-@media screen and (min-width: 992px) {
-    .devTitleWrapper{
-       width: 50%;
-    } 
 }
 .workImg{
     width: 100%;
     max-height: 350px;
     object-fit: cover;  
 }
-@media screen and (min-width: 480px){
-    .workImg{
-        height: fit-content;
-    }
-}
 .skillTitle{
     margin: 0;
-}
-@media screen and (min-width: 480px){
-    .skillTitle{
-        font-size:1.7em ;
-    }
 }
 .skillSubtitle{
     margin-bottom: 0px;
 }
-@media screen and (min-width: 480px){
+
+
+
+/* media query tablet*/
+@media screen and (min-width: 480px) {
+    .mainWrapper{
+        height: 62%;
+    } 
+    .name{
+        font-size: 2.7em;
+    }    
+    .profession{
+        font-size: 2em;
+     }
+    .explanation{
+         font-size: 1.5em;
+     } 
+    .sectionTitle{
+        font-size: 2em;
+    } 
+    .devWrapper, .seoWrapper{
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    .seoWrapper{
+        flex-direction: row-reverse;
+    }
+    .devImgWrapper, .seoImgWrapper{
+        max-width: 50%;
+    }
+    .devTitleWrapper, .seoTitleWrapper{
+        margin: 30px; 
+        display: flex;
+        flex-direction: column;
+     }
+    .workImg{
+        height: fit-content;
+    }
+    .skillTitle{
+        font-size:1.7em ;
+    }
     .skillSubtitle{
         font-size:1.2em ;
     }
+}
+/* media query desktop */
+@media screen and (min-width: 992px) {
+    .devTitleWrapper{
+       width: 50%;
+    } 
 }
 /*footer*/
 .footerWrapper{
