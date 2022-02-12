@@ -1,10 +1,16 @@
+:root {
+    --grey: rgb(168, 168, 168);
+}
+
 .allPage {
     margin: 0px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .headerWrapper {
-    width: 100%;
-    height: 25%;
+    width: 100vw;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,16 +20,41 @@
 .profileWrapper {
     border-radius: 100%;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    width: 27vh;
+    height: 27vh;
 }
 
 .nameWrapper {
-    border: 2px solid black;
+    border: 2px solid var(--grey);
     border-radius: 50px;
-    width: 70%;
+    width: 550px;
     height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.name {
+    font-size: 25px;
+    padding-left: 25px;
+}
+
+.searchIconWrapper {
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchIconWrapper > .vl {
+    border-left: 2px solid var(--grey);
+    height: 38px;
+}
+
+.searchIconWrapper > .xIcon {
+    height: 30px;
+    width: 30px;
 }
