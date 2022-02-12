@@ -1,6 +1,10 @@
+/* ---------- Variables ---------- */
+
 :root {
     --grey: rgb(168, 168, 168);
 }
+
+/* ----------- Header ----------- */
 
 .allPage {
     margin: 0px;
@@ -57,4 +61,47 @@
 .searchIconWrapper > .xIcon {
     height: 30px;
     width: 30px;
+}
+
+/* ----------- Main ----------- */
+
+.mainWrapper {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 60%;
+    height: 60%;
+}
+
+/* -------- Left side -------- */
+
+.leftSide {
+    border: 2px solid black;
+    padding-left: 70px;
+    grid-column: 1 / 2;
+}
+
+/* -------- Right side -------- */
+
+.rightSide {
+    border: 2px solid black;
+    grid-column: 2 / 3;
+}
+
+.rightTab {
+    width: 80%;
+    padding-right: 40px;
+    display: grid;
+    grid-template-rows: 30%;
+}
+
+.tabHead {
+    border: 2px solid black;
+    overflow: hidden;
+    grid-row: 1 / 2;
+}
+
+.tabBody {
+    border: 2px solid black;
+    overflow: hidden;
+    grid-row: 2 / 3;
 }
