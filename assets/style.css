@@ -2,6 +2,7 @@
 
 :root {
     --grey: rgb(168, 168, 168);
+    --grey-hover: rgb(124, 124, 124);
 }
 
 /* ----------- Header ----------- */
@@ -10,25 +11,28 @@
     margin: 0px;
     width: 100%;
     height: 100%;
+    /* font-family: 'Courgette', cursive; */
+    font-family: 'Poiret One', cursive;
+    /* font-family: 'Rowdies', cursive; */
 }
 
 .headerWrapper {
     width: 100%;
-    height: 40%;
+    height: 20%;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
 }
 
-.profileWrapper {
+/* .profileWrapper {
     border-radius: 100%;
     overflow: hidden;
     margin-bottom: 15px;
     margin-top: 30px;
     width: 225px;
     height: 225px;
-}
+} */
 
 .nameWrapper {
     border: 2px solid var(--grey);
@@ -39,11 +43,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-left: 100px;
 }
 
 .name {
     font-size: 25px;
     padding-left: 25px;
+    margin: 0px;
 }
 
 .searchIconWrapper {
@@ -55,53 +61,109 @@
 
 .searchIconWrapper > .vl {
     border-left: 2px solid var(--grey);
-    height: 38px;
+    height: 30px;
 }
 
 .searchIconWrapper > .xIcon {
-    height: 30px;
+    height: 25px;
     width: 30px;
 }
 
 /* ----------- Main ----------- */
 
 .mainWrapper {
-    padding-top: 30px;
+    padding-top: 60px;
     display: grid;
-    grid-template-columns: 60%;
-    height: 60%;
+    grid-template-columns: 55% 40px;
 }
 
 /* -------- Left side -------- */
 
 .leftSide {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding-left: 70px;
     grid-column: 1 / 2;
+}
+
+.textTitleWrapper {
+    font-family: 'Courgette', cursive;
+    margin-bottom: 40px;
+}
+
+.gradesWrapper,
+.goalsWrapper,
+.interestsWrapper {
+    border-bottom: 2px solid var(--grey);
+    margin-bottom: 20px;
 }
 
 /* -------- Right side -------- */
 
 .rightSide {
-    border: 2px solid black;
-    grid-column: 2 / 3;
+    /* border: 2px solid black; */
+    grid-column: 3 / 4;
 }
 
 .rightTab {
-    width: 80%;
-    padding-right: 40px;
+    width: 90%;
+    height: fit-content;
+    padding-right: 30px;
     display: grid;
-    grid-template-rows: 30%;
+    grid-template-rows: 40%;
+    margin-bottom: 15px;
 }
 
 .tabHead {
-    border: 2px solid black;
+    border-width: 3px 3px 1.5px 3px;
+    border-style: solid;
+    border-color: var(--grey);
+    border-radius: 20px 20px 0px 0px;
+    padding: -2px;
     overflow: hidden;
     grid-row: 1 / 2;
 }
 
 .tabBody {
-    border: 2px solid black;
+    border-width: 1.5px 3px 3px 3px;
+    border-style: solid;
+    border-color: var(--grey);
+    border-radius: 0px 0px 20px 20px;
     overflow: hidden;
+    padding: 10px 25px 10px 25px;
     grid-row: 2 / 3;
+}
+
+.profileImg {
+    max-width:100%;
+    max-height:100%;
+}
+
+.tabBody > a > img{
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+.tabBody > h3 {
+    font-weight: bolder;
+}
+
+/* -------- Scroll bar -------- */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--grey); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--grey);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-hover); 
 }
