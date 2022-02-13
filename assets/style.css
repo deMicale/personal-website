@@ -25,15 +25,6 @@
     flex-direction: column;
 }
 
-/* .profileWrapper {
-    border-radius: 100%;
-    overflow: hidden;
-    margin-bottom: 15px;
-    margin-top: 30px;
-    width: 225px;
-    height: 225px;
-} */
-
 .nameWrapper {
     border: 2px solid var(--grey);
     border-radius: 50px;
@@ -69,12 +60,40 @@
     width: 30px;
 }
 
+@media only screen and (max-width: 730px) {
+    .nameWrapper {
+        width: 75%;
+        margin-left: 12%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .name {
+        padding-left: 10px;
+        font-size: 21px;
+    }
+}
+
 /* ----------- Main ----------- */
 
 .mainWrapper {
     padding-top: 60px;
     display: grid;
     grid-template-columns: 58% 100px;
+}
+
+@media only screen and (max-width: 1002px) {
+    .mainWrapper {
+        grid-template-columns: none;
+        grid-template-rows: 350px;
+    }
+}
+
+@media only screen and (max-width: 661px) {
+    .mainWrapper {
+        padding-top: 20px;
+        grid-template-rows: 630px;
+    }
 }
 
 /* -------- Left side -------- */
@@ -104,6 +123,32 @@
     line-height: 40px;
 }
 
+@media only screen and (max-width: 1002px) {
+    .leftSide {
+        grid-column: unset;
+        grid-row: 2 / 3;
+    }
+
+    .gradesWrapper,
+    .goalsWrapper,
+    .interestsWrapper {
+        margin-right: 70px;
+    }
+}
+
+@media only screen and (max-width: 661px) {
+    .leftSide {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .gradesWrapper,
+    .goalsWrapper,
+    .interestsWrapper {
+        margin-right: 30px;
+    }
+}
+
 /* -------- Right side -------- */
 
 .rightSide {
@@ -114,10 +159,9 @@
 .rightTab {
     width: 90%;
     max-width: 400px;
-    height: fit-content;
     padding-right: 30px;
     display: grid;
-    grid-template-rows: 40%;
+    grid-template-rows: 248px;
     margin-bottom: 15px;
 }
 
@@ -138,6 +182,7 @@
     overflow: hidden;
     padding: 10px 25px 10px 25px;
     grid-row: 2 / 3;
+    height: fit-content;
 }
 
 .profileImg {
@@ -146,16 +191,76 @@
 }
 
 .tabBody > a > img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 7px;
-    box-shadow: 6px 9px 11px var(--grey);
+    box-shadow: 5px 6px 9px var(--grey);
     border-radius: 9px;
 }
 
 .tabBody > h3 {
     margin-top: 5px;
     font-weight: normal;
+}
+
+@media only screen and (max-width: 1002px) {
+    .rightSide {
+        grid-column: unset;
+        grid-row: 1 / 2;
+    }
+
+    .rightTab {
+        grid-template-rows: none;
+        grid-template-columns: 228px;
+        min-width: fit-content;
+        max-width: 80%;
+        margin-left: 11%;
+    }
+
+    .tabHead {
+        grid-row: unset;
+        grid-column: 1 / 2;
+        border-width: 0px 1.5px 0px 0px;
+        border-radius: 0px 0px 20px 20px;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .tabBody {
+        grid-row: unset;
+        grid-column: 2 / 3;
+        border-width: 3px 3px 3px 1.5px;
+        border-radius: 0px 20px 20px 0px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .rightTab {
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (max-width: 661px) {
+    .rightTab {
+        grid-template-rows: 244px;
+        grid-template-columns: none;
+        max-width: fit-content;
+        margin-left: calc(50% - 178px);
+        padding: 0px;
+    }
+
+    .tabHead {
+        grid-row: 1 / 2;
+        grid-column: unset;
+        border-width: 0px 0px 1.5px 0px;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .tabBody {
+        grid-row: 2 / 3;
+        grid-column: unset;
+        border-width: 1.5px 3px 3px 3px;
+        border-radius: 0px 0px 20px 20px;
+    }
 }
 
 /* -------- Scroll bar -------- */
